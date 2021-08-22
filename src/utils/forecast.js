@@ -9,7 +9,8 @@ const forecast = (a, b, callback) => {
         } else if (body.error) {
             callback('Unable to find the loaction', undefined)
         } else {
-            callback(undefined, 'Currently it is ' + body.current.weather_descriptions[0] + " and temparature is " + body.current.temperature + " degrees. It feels like " + body.current.feelslike + " degrees outside.")
+            callback(undefined, 'Currently it is ' + body.current.weather_descriptions[0] + " and temparature is " + body.current.temperature + " degrees. It feels like " + body.current.feelslike + " degrees outside." +
+                " The wind speed is "+body.current.wind_speed+" km/h . The Humidity is "+body.current.humidity+ " %.")
         }
     })
 }
